@@ -1,0 +1,12 @@
+
+ <h1>User Registration</h1>
+<%= form_with model: @user do |f| %>
+<div>
+<p>First Name: <%= f.text_field :first_name %></p>
+<p>Last Name: <%= f.text_field :family_name %></p>
+</div>
+
+<%= f.submit 'Register' %>
+<% end %>
+
+<%= link_to "List Page", root_path %>

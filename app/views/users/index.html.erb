@@ -1,0 +1,14 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<h1>List Page</h1>
+<% @users.each do |user| %>
+  <div>
+    <p>First Name: <%= user.first_name %></p>
+    <p>Family Name: <%= user.family_name %></p>
+  </div>
+ <%= link_to "Details page", user_path(user.id) %>
+  <hr> <!-- Separate with a horizontal line  -->
+<% end %>
+
+<%= link_to "Registration page", users_new_path %>
